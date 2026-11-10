@@ -1,0 +1,33 @@
+/* ============================================
+   PAGE-PARCOURS.CSS - Page Parcours (version française)
+   (css/parcours.css reste utilisé par la version anglaise)
+   ============================================ */
+.entete { padding: 92px var(--marge) 10px; }
+.entete h1 { font-size: min(21vw, 44vh); line-height: .98; white-space: nowrap; overflow: hidden; margin-left: -.02em; }
+.entete h1 span { display: inline-block; }
+
+.bloc { padding: clamp(30px, 6vh, 70px) var(--marge) clamp(40px, 8vh, 90px); }
+.bloc:nth-of-type(even) { background: var(--nuit-2); }
+.bloc > h2 { display: flex; align-items: center; gap: .4em; font-size: clamp(2.2rem, 4.6vw, 4.6rem); margin-bottom: clamp(24px, 4vh, 44px); }
+.bloc > h2 i { font-size: .6em; color: #ff7a80; }
+
+/* Frise : une ligne qui se dessine au fil du défilement, un point par étape. */
+.frise { position: relative; padding-left: clamp(34px, 5vw, 70px); }
+.frise::before, .trait { content: ''; position: absolute; left: clamp(9px, 1.4vw, 18px); top: 8px; bottom: 8px; width: 3px; background: rgba(246, 247, 251, .18); }
+.trait { background: var(--rouge); transform-origin: 50% 0; }
+.etape { position: relative; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(16px, 3vw, 44px); padding: 8px 0 clamp(34px, 6vh, 60px); }
+.point { position: absolute; left: calc(-1 * clamp(34px, 5vw, 70px) + clamp(9px, 1.4vw, 18px) - 7px); top: 14px; width: 17px; height: 17px; border-radius: 50%; background: var(--nuit); border: 3px solid rgba(246, 247, 251, .45); transition: background-color .3s, border-color .3s, transform .3s; }
+.point.allume { background: var(--rouge); border-color: var(--rouge); transform: scale(1.25); }
+.date { font-family: var(--titre); text-transform: uppercase; font-size: clamp(1.9rem, 3.6vw, 3.6rem); line-height: 1.02; color: #ff7a80; }
+.etape h3 { font-size: clamp(1.8rem, 3vw, 3rem); }
+.lieu { color: var(--gris); font-style: italic; margin: 6px 0 12px; }
+.lieu i { margin-right: 6px; font-style: normal; }
+.texte p { margin-bottom: 10px; max-width: 62ch; }
+.texte ul { padding-left: 20px; }
+.texte li { padding: 3px 0; }
+
+@media (max-width: 899px) {
+  .entete { padding: 82px 16px 6px; }
+  .bloc { padding: 34px 16px 46px; }
+  .etape { grid-template-columns: 1fr; gap: 6px; }
+}

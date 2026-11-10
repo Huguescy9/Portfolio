@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHANE-YIN Hugues - Accueil</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/commun.css?v=5">
+  <link rel="stylesheet" href="../css/accueil.css?v=7">
+</head>
+<body>
+  <header class="barre">
+    <a class="marque" href="index.html">CHANE-YIN Hugues</a>
+    <button class="ouvre-menu" id="ouvreMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="projets.html">Projets</a>
+      <a href="competences.html">Compétences</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="contact.html">Contact</a>
+      <a class="lien-cv" href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" id="intro">
+      <img class="intro-photo" src="../assets/hero-etoiles.jpg" alt="">
+      <div class="apres" id="apres">
+        <h1>Bienvenue sur mon portfolio</h1>
+        <p>Je suis CHANE-YIN Hugues, un passionné de Réseaux et Télécommunications.
+        J'aime créer, apprendre et relever de nouveaux défis. Découvrez mes compétences, mes projets et mon parcours professionnel.</p>
+        <a class="bouton" href="projets.html">Découvrir mes projets</a>
+      </div>
+      <svg id="voile" aria-hidden="true">
+        <defs>
+          <clipPath id="fen" clipPathUnits="userSpaceOnUse"><rect id="fen-r"/></clipPath>
+          <mask id="trou" maskUnits="userSpaceOnUse"><rect id="m-fond" fill="#fff"/><g id="m-g"><text id="m-t" fill="#000" text-anchor="middle" visibility="hidden">HUGUES</text><g id="lm" clip-path="url(#fen)"></g></g></mask>
+        </defs>
+        <rect id="v-r" mask="url(#trou)"/>
+        <g id="contour"><g id="lc" clip-path="url(#fen)"></g></g>
+      </svg>
+      <p class="sous" id="sous"><span>Étudiant en 3<sup>e</sup> année · BUT Réseaux &amp; Télécommunications</span></p>
+    </section>
+
+    <section class="recherche">
+      <p id="phrase">Je cherche un emploi dans les Réseaux et Télécommunications.</p>
+      <div class="actions">
+        <button class="geste" id="copier" data-mail="h.chane-yin@rt-iut.re">Copier mon e-mail</button>
+        <a class="geste" href="contact.html">Contact</a>
+      </div>
+    </section>
+
+    <section class="piste" id="projets" aria-labelledby="t-projets">
+      <div class="rail" id="rail">
+        <div class="volet-titre"><h2 id="t-projets">Projets</h2></div>
+
+        <article class="volet">
+          <button class="photo ouvre" data-p="chat" data-img="../assets/projet-chat.jpg" aria-label="Voir le détail : Application de chat d'entreprise souveraine">
+            <span class="z"><img src="../assets/projet-chat.jpg" alt="Application de chat d'entreprise souveraine"></span>
+          </button>
+          <div class="bas">
+            <h3>Application de chat d'entreprise souveraine</h3>
+            <div>
+              <p>Conception d'une messagerie interne hébergée localement, alternative à Slack/Teams, avec accès protégé en profondeur, chiffrement des échanges, sauvegardes et plans de continuité.</p>
+              <p class="tags">#Souveraineté #Cybersécurité #PRA/PCA #Chiffrement</p>
+              <button class="detail ouvre" data-p="chat" data-img="../assets/projet-chat.jpg">Voir le détail</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="volet">
+          <button class="photo ouvre" data-p="cybersecurity" data-img="../assets/projet-cybersecurite.jpg" aria-label="Voir le détail : Hygiène informatique et cybersécurité">
+            <span class="z"><img src="../assets/projet-cybersecurite.jpg" alt="Cybersécurité"></span>
+          </button>
+          <div class="bas">
+            <h3>Hygiène informatique et cybersécurité</h3>
+            <div>
+              <p>Projet de sensibilisation aux bonnes pratiques de cybersécurité (protection des données, phishing, mots de passe, malwares, etc.).</p>
+              <p class="tags">#Cybersécurité #Phishing #ProtectionDesDonnées</p>
+              <button class="detail ouvre" data-p="cybersecurity" data-img="../assets/projet-cybersecurite.jpg">Voir le détail</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="volet">
+          <button class="photo ouvre" data-p="raspberrypi" data-img="../assets/projet-raspberry.jpg" aria-label="Voir le détail : Initiation aux réseaux informatiques">
+            <span class="z"><img src="../assets/projet-raspberry.jpg" alt="Raspberry Pi"></span>
+          </button>
+          <div class="bas">
+            <h3>Initiation aux réseaux informatiques</h3>
+            <div>
+              <p>Configuration d'une Raspberry Pi avec administration distante via SSH, contrôle d'une LED, collecte et transmission de données de capteurs.</p>
+              <p class="tags">#Réseaux #RaspberryPi #SSH #Python</p>
+              <button class="detail ouvre" data-p="raspberrypi" data-img="../assets/projet-raspberry.jpg">Voir le détail</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="autres" aria-labelledby="t-autres">
+      <h2 id="t-autres">Autres projets</h2>
+      <div class="grille">
+        <article class="tuile">
+          <button class="photo ouvre" data-p="fibreoptique" data-img="../assets/projet-fibre.jpg" aria-label="Voir le détail : Transmission de données"><span class="z"><img src="../assets/projet-fibre.jpg" alt="Fibre optique"></span></button>
+          <h3>Transmission de données</h3>
+        </article>
+        <article class="tuile">
+          <button class="photo ouvre" data-p="linux" data-img="../assets/projet-linux.jpg" aria-label="Voir le détail : Sécurisation et traitement des données"><span class="z"><img src="../assets/projet-linux.jpg" alt="Sécurité Linux"></span></button>
+          <h3>Sécurisation et traitement des données</h3>
+        </article>
+        <article class="tuile">
+          <button class="photo ouvre" data-p="sdr" data-img="../assets/sdr-constellation.jpg" aria-label="Voir le détail : Transmission SDR avec ADALM-PLUTO"><span class="z"><img src="../assets/sdr-cover.jpg" alt="Transmission SDR avec ADALM-PLUTO"></span></button>
+          <h3>Transmission SDR avec ADALM-PLUTO</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="savoir" aria-label="Compétences">
+      <div class="pan p1"><h2>Techniques</h2><p>HTML/CSS, Python, SQL, TCP/IP, Linux</p></div>
+      <div class="pan p2"><h2>Certifications &amp; Formations</h2><p>PIX, MOOC ANSSI, Fresque du numérique</p></div>
+      <div class="pan p3"><h2>Soft Skills</h2><p>Sérieux, Esprit d'équipe, Savoir-être</p></div>
+    </section>
+
+    <section class="parcours" aria-label="Parcours">
+      <div class="ligne"><div><small>Avril 2026 - Juin 2026</small><h3>Stage — DSI/DNT</h3><p>Mairie de Saint-Pierre</p></div></div>
+      <div class="ligne"><div><small>2023-2026</small><h3>BUT Réseaux &amp; Télécommunications</h3><p>IUT de La Réunion</p></div></div>
+      <div class="ligne"><div><small>2022 - 2023</small><h3>Baccalauréat Général</h3><p>Lycée de Trois Bassins</p></div></div>
+    </section>
+
+    <section class="dern">
+      <a id="gros" href="cv.html"><span>Mon CV</span><i aria-hidden="true">Mon CV</i></a>
+    </section>
+  </main>
+
+  <div id="pied"></div>
+  <p class="credit">Photos : accueil, ESO/B. Tafreshi (twanight.org), <a href="https://commons.wikimedia.org/wiki/File:Whirling_Southern_Star_Trails_over_ALMA.jpg" target="_blank" rel="noopener">CC BY 4.0</a> ; serveurs, Victorgrigas, <a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_14.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a> ; fibre optique, Hustvedt, <a href="https://commons.wikimedia.org/wiki/File:Fiber_optic_illuminated.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
+
+  <div id="feuille" role="dialog" aria-modal="true" aria-labelledby="f-t" data-lenis-prevent>
+    <img id="f-i" alt="">
+    <div class="cont" id="f-c"></div>
+  </div>
+  <button id="clore">Fermer</button>
+  <div id="toast" role="status"></div>
+
+  <script src="../js/lib/gsap.min.js"></script>
+  <script src="../js/lib/ScrollTrigger.min.js"></script>
+  <script src="../js/lib/lenis.min.js"></script>
+  <script src="../js/commun.js?v=5"></script>
+  <script src="../js/accueil.js?v=6"></script>
+</body>
+</html>

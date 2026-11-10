@@ -1,0 +1,83 @@
+/* ============================================
+   ACCUEIL.CSS - Page d'accueil (version française)
+   ============================================ */
+
+/* === INTRO === */
+.intro { position: relative; height: 100dvh; overflow: hidden; background: var(--nuit); }
+.intro-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#voile { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#v-r { fill: var(--nuit); }
+#m-t, .lettre { font-family: var(--titre); }
+.sous span { display: inline-block; }
+.sous { position: absolute; left: var(--marge); bottom: clamp(26px, 6vh, 60px); font-size: clamp(1.05rem, 1.7vw, 1.5rem); font-weight: 500; max-width: 34ch; }
+.sous sup { font-size: .65em; line-height: 0; }
+.apres { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 20px; padding: 90px var(--marge) clamp(36px, 8vh, 80px); background: linear-gradient(rgba(10, 20, 51, .22), rgba(10, 20, 51, .9) 68%); }
+.js .apres { opacity: 0; }
+.apres h1 { font-size: clamp(2.8rem, 7.4vw, 7.4rem); max-width: 14ch; }
+.apres p { font-size: clamp(1.05rem, 1.5vw, 1.35rem); max-width: 58ch; }
+
+/* === RECHERCHE === */
+.recherche { padding: 18vh var(--marge); }
+.recherche p { font-family: var(--titre); text-transform: uppercase; font-size: clamp(2.4rem, 7vw, 6.6rem); line-height: 1.08; max-width: 16ch; }
+.js .recherche span { opacity: .18; display: inline-block; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+
+/* === PROJETS EN VEDETTE === */
+.piste { overflow: hidden; }
+.rail { display: flex; height: 100dvh; width: max-content; }
+.volet-titre { width: 38vw; flex: none; display: flex; align-items: center; padding: 0 var(--marge); }
+.volet-titre h2 { font-size: clamp(4rem, 10.5vw, 11rem); }
+.volet { width: min(84vw, 1180px); height: 100%; flex: none; display: grid; grid-template-rows: 56% 1fr; padding-top: 58px; }
+.volet:nth-of-type(odd) { background: var(--rouge); }
+.volet:nth-of-type(even) { background: var(--nuit-2); }
+.volet .photo img { width: 118%; margin-left: -9%; }
+.volet .bas { padding: 20px clamp(16px, 2.6vw, 36px); display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px; align-items: start; overflow: hidden; }
+.volet h3 { font-size: clamp(1.9rem, 3.6vw, 3.4rem); }
+
+/* === AUTRES PROJETS === */
+.autres { padding: 13vh var(--marge); background: var(--nuit); position: relative; }
+.autres h2 { font-size: clamp(2.2rem, 5vw, 4.6rem); margin-bottom: 28px; }
+.grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tuile .photo { height: auto; aspect-ratio: 4 / 3; }
+.tuile h3 { font-size: clamp(1.15rem, 1.75vw, 1.8rem); margin-top: 10px; }
+
+/* === COMPÉTENCES === */
+.pan { position: sticky; top: 0; min-height: 100dvh; padding: 15vh var(--marge) 9vh; display: flex; flex-direction: column; justify-content: space-between; gap: 30px; }
+.pan h2 { font-size: clamp(2.8rem, 11.2vw, 11rem); }
+.pan p { font-size: clamp(1.25rem, 2.2vw, 2rem); font-weight: 500; }
+.p1 { background: var(--rouge); }
+.p2 { background: var(--nuit-2); }
+.p3 { background: var(--clair); color: var(--nuit); }
+
+/* === PARCOURS === */
+.parcours { padding: 15vh var(--marge); background: var(--nuit); position: relative; }
+.ligne { overflow: hidden; padding: 14px 0; }
+.ligne small { display: block; color: #ff7a80; font-size: clamp(1rem, 1.5vw, 1.3rem); font-weight: 700; margin-bottom: 4px; }
+.ligne h3 { font-size: clamp(2.3rem, 6.2vw, 6rem); }
+.ligne p { color: var(--gris); margin-top: 4px; font-size: clamp(1rem, 1.3vw, 1.2rem); }
+
+/* === MON CV === */
+.dern { background: var(--clair); color: var(--rouge); padding: 9vh var(--marge); position: relative; }
+#gros { display: block; width: max-content; max-width: 100%; font-family: var(--titre); text-transform: uppercase; font-size: 25vw; line-height: 1; white-space: nowrap; text-decoration: none; position: relative; }
+#gros i { position: absolute; inset: 0; color: var(--clair); background: var(--rouge); font-style: normal; clip-path: inset(100% 0 0 0); transition: clip-path .45s cubic-bezier(.7, 0, .2, 1); }
+#gros:hover i, #gros:focus-visible i { clip-path: inset(0 0 0 0); }
+
+/* === RESPONSIVE === */
+@media (max-width: 899px) {
+  .rail { flex-direction: column; height: auto; width: 100%; }
+  .volet-titre { width: 100%; padding: 8vh 16px 26px; }
+  .volet { width: 100%; height: auto; grid-template-rows: auto auto; padding-top: 0; }
+  .volet > .photo { height: 58vw; }
+  .volet .bas { grid-template-columns: 1fr; gap: 12px; padding: 22px 16px 34px; }
+  .recherche { padding: 13vh 16px; }
+  .autres { padding: 10vh 16px; }
+  .grille { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .grille > .tuile:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .grille > .tuile:last-child:nth-child(odd) .photo { aspect-ratio: 16 / 9; }
+  .pan { padding: 12vh 16px 8vh; }
+  .parcours { padding: 11vh 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .apres { opacity: 1; }
+  .js .recherche span { opacity: 1; }
+}

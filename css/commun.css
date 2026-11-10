@@ -1,0 +1,96 @@
+/* ============================================
+   COMMUN.CSS - Éléments partagés par les pages refaites
+   ============================================ */
+:root {
+  --nuit: #0a1433;
+  --nuit-2: #111d47;
+  --rouge: #e3242b;
+  --clair: #f6f7fb;
+  --gris: #b9c2da;
+  --titre: 'Anton', Impact, sans-serif;
+  --corps: 'Hanken Grotesk', system-ui, sans-serif;
+  --marge: clamp(16px, 3vw, 40px);
+}
+* { box-sizing: border-box; margin: 0; }
+html { overflow-x: clip; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
+body { font-family: var(--corps); background: var(--nuit); color: var(--clair); line-height: 1.5; overflow-x: clip; }
+h1, h2, h3 { font-family: var(--titre); font-weight: 400; text-transform: uppercase; line-height: 1.04; }
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* === BARRE === */
+.barre { position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 12px var(--marge); background: var(--nuit-2); }
+.marque { font-family: var(--titre); text-transform: uppercase; font-size: 1.25rem; letter-spacing: .02em; text-decoration: none; white-space: nowrap; }
+.menu { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
+.menu a { text-decoration: none; font-weight: 500; background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size .25s; }
+.menu a:hover, .menu a[aria-current="page"] { background-size: 100% 2px; }
+.menu a.lien-cv { background: var(--rouge); color: #fff; padding: 8px 16px; font-weight: 700; transition: transform .2s; }
+.menu a.lien-cv:hover { transform: translateY(-2px); }
+.ouvre-menu { display: none; font-weight: 700; padding: 8px 14px; border: 2px solid #fff; }
+
+/* === BOUTONS === */
+.bouton { display: inline-block; background: var(--rouge); color: #fff; padding: 14px 26px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform .2s; }
+.bouton:hover { transform: translateY(-3px); }
+.bouton:active { transform: translateY(1px); }
+.geste { display: inline-block; border: 2px solid currentColor; padding: 13px 24px; font-weight: 700; white-space: nowrap; text-decoration: none; transition: background-color .2s, color .2s; }
+.geste:hover { background: var(--clair); color: var(--nuit); }
+
+/* === PHOTOS DE PROJET === */
+.photo { display: block; width: 100%; height: 100%; overflow: hidden; cursor: zoom-in; position: relative; }
+.photo .z { display: block; width: 100%; height: 100%; transition: transform .6s cubic-bezier(.2, .8, .2, 1); }
+.photo:hover .z, .photo:focus-visible .z { transform: scale(1.05); }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tags { margin-top: 10px; font-weight: 700; font-size: .95rem; }
+.detail { margin-top: 12px; font-weight: 700; border-bottom: 2px solid currentColor; }
+.detail:hover { opacity: .75; }
+
+/* === PIED DE PAGE (contenu de fr/footer.html) === */
+#pied { position: relative; }
+footer { background: var(--nuit-2); }
+.footer-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 52px var(--marge); }
+.footer-section h3 { text-transform: uppercase; font-size: 1.6rem; margin-bottom: 8px; }
+.footer-section h4 { font-size: 1.1rem; margin-bottom: 12px; }
+.footer-section p, .footer-section li { color: var(--gris); }
+.footer-section ul { list-style: none; padding: 0; }
+.footer-section li { margin-bottom: 9px; }
+.footer-section li i { color: #ff7a80; width: 22px; }
+.footer-section a { text-decoration: none; }
+.footer-section a:hover { color: #fff; }
+.social-links { display: flex; gap: 16px; margin-top: 14px; font-size: 1.5rem; }
+.footer-bottom { padding: 16px var(--marge) 8px; color: var(--gris); font-size: .92rem; background: var(--nuit-2); }
+.credit { padding: 0 var(--marge) 18px; color: var(--gris); font-size: .82rem; background: var(--nuit-2); position: relative; }
+
+/* === FICHE PROJET PLEIN ÉCRAN === */
+#feuille { position: fixed; inset: 0; background: var(--clair); color: var(--nuit); z-index: 60; visibility: hidden; overflow-y: auto; }
+#feuille img { width: 100%; height: 56vh; object-fit: cover; display: block; background: var(--nuit); }
+#feuille .cont { padding: 30px var(--marge) 70px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
+#feuille h2 { grid-column: 1 / -1; color: var(--rouge); font-size: clamp(2.5rem, 5.6vw, 5.4rem); }
+#feuille h3 { font-size: 1.5rem; margin: 20px 0 10px; }
+#feuille h3:first-child { margin-top: 0; }
+#feuille ul { padding-left: 20px; }
+#feuille li { padding: 4px 0; }
+.etiquettes { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.etiquettes span { background: var(--nuit); color: #fff; padding: 5px 11px; font-size: .9rem; font-weight: 500; }
+.reflexion { margin: 22px 0; padding-left: 16px; border-left: 4px solid var(--rouge); font-style: italic; }
+.reflexion strong { display: block; font-style: normal; margin-bottom: 4px; }
+.docs a { display: inline-block; margin: 6px 16px 0 0; font-weight: 700; color: #b5121a; }
+#clore { position: fixed; top: 14px; right: 14px; background: var(--nuit); color: #fff; padding: 11px 18px; font-weight: 700; z-index: 61; display: none; }
+
+#toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); z-index: 70; padding: 11px 18px; background: #fff; color: var(--nuit); font-weight: 700; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: calc(100vw - 32px); }
+#toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* === RESPONSIVE === */
+@media (max-width: 899px) {
+  .ouvre-menu { display: block; }
+  .menu { position: fixed; inset: 58px 0 0 0; background: var(--nuit-2); flex-direction: column; align-items: flex-start; gap: 6px; padding: 24px 16px; font-family: var(--titre); text-transform: uppercase; font-size: 2.4rem; visibility: hidden; opacity: 0; transition: opacity .2s, visibility .2s; }
+  .menu.ouvert { visibility: visible; opacity: 1; }
+  .menu a.lien-cv { margin-top: 10px; padding: 6px 16px; }
+  .footer-content { grid-template-columns: 1fr; gap: 26px; }
+  #feuille img { height: 40vh; }
+  #feuille .cont { grid-template-columns: 1fr; gap: 16px; }
+}
+.footer-bottom a { color: inherit; }

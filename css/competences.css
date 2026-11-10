@@ -1,0 +1,151 @@
+/* ============================================================
+   SECTION COMPÉTENCES (structure générale)
+============================================================ */
+#competences {
+  background: var(--bg-gradient);
+  padding: 1rem 0 4rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skill-category {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ============================================================
+   TITRES DE CATÉGORIES
+============================================================ */
+.skill-category h4 {
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-primary); /* sera surchargé par catégories */
+}
+
+/* Déclinaisons par catégorie */
+.cat-tech h4 { border-color: #3b82f6; }
+.cat-cert h4 { border-color: #8b5cf6; }
+.cat-soft h4 { border-color: #f97316; }
+
+/* ============================================================
+   LISTE & ITEMS
+============================================================ */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.skill-item {
+  padding: var(--spacing-sm);
+  background: #f8f9fa;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-normal);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+}
+
+/* Ligne de couleur à gauche selon catégorie */
+.cat-tech .skill-item  { border-left: 4px solid #3b82f6; }
+.cat-cert .skill-item  { border-left: 4px solid #8b5cf6; }
+.cat-soft .skill-item  { border-left: 4px solid #f97316; }
+
+/* Cascade animation */
+.skills-list .skill-item:nth-child(1) { animation-delay: 0.15s; }
+.skills-list .skill-item:nth-child(2) { animation-delay: 0.30s; }
+.skills-list .skill-item:nth-child(3) { animation-delay: 0.45s; }
+.skills-list .skill-item:nth-child(4) { animation-delay: 0.60s; }
+.skills-list .skill-item:nth-child(5) { animation-delay: 0.75s; }
+
+/* ============================================================
+   BADGES DES COMPÉTENCES
+============================================================ */
+.skill-badge {
+  background: #f8f9fa;
+  border: 2px solid var(--color-primary); /* surchargé ci-dessous */
+  color: var(--color-dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-lg);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+/* Couleur des badges selon les catégories */
+.cat-tech .skill-badge { border-color: #3b82f6; }
+.cat-cert .skill-badge { border-color: #8b5cf6; }
+.cat-soft .skill-badge { border-color: #f97316; }
+
+/* Icônes assorties */
+.cat-tech .skill-badge i { color: #3b82f6 !important; }
+.cat-cert .skill-badge i { color: #8b5cf6 !important; }
+.cat-soft .skill-badge i { color: #f97316 !important; }
+
+/* ============================================================
+   HOVER (UNIQUEMENT POUR TECHNIQUES)
+============================================================ */
+.cat-tech .skill-badge:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.cat-tech .skill-badge:hover i {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   DÉSACTIVATION COMPLÈTE DU HOVER POUR CERTIFICATIONS & SOFT SKILLS
+============================================================ */
+.cat-cert .skill-badge,
+.cat-soft .skill-badge {
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+.cat-cert .skill-badge:hover,
+.cat-soft .skill-badge:hover {
+  background: #f8f9fa !important;
+  color: var(--color-dark) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================
+   ANIMATION DU TITRE PRINCIPAL & CATÉGORIES
+============================================================ */
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.skill-category h4 {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+}
+
+/* Délais pour les catégories */
+.skill-category:nth-child(1) h4 { animation-delay: 0.25s; }
+.skill-category:nth-child(2) h4 { animation-delay: 0.40s; }
+.skill-category:nth-child(3) h4 { animation-delay: 0.55s; }
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+.skill-description {
+  margin-top: 0.8rem;
+  color: var(--text-medium);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

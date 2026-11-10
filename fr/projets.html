@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHANE-YIN Hugues - Projets</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/commun.css?v=5">
+  <link rel="stylesheet" href="../css/projets.css?v=4">
+</head>
+<body>
+  <header class="barre">
+    <a class="marque" href="index.html">CHANE-YIN Hugues</a>
+    <button class="ouvre-menu" id="ouvreMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="projets.html" aria-current="page">Projets</a>
+      <a href="competences.html">Compétences</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="contact.html">Contact</a>
+      <a class="lien-cv" href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="entete">
+      <h1 id="t-page">Projets</h1>
+      <div class="filtres" role="group" aria-label="Filtrer les projets">
+        <button class="filtre" data-f="tout" aria-pressed="true">Tous</button>
+        <button class="filtre" data-f="cyber" aria-pressed="false">Cybersécurité</button>
+        <button class="filtre" data-f="reseau" aria-pressed="false">Réseaux</button>
+        <button class="filtre" data-f="telecom" aria-pressed="false">Télécommunications</button>
+      </div>
+    </section>
+
+    <section class="cartes" id="cartes" aria-label="Liste des projets">
+        <article class="carte" data-t="cyber">
+          <button class="photo ouvre" data-p="chat" data-img="../assets/projet-chat.jpg" aria-label="Voir le détail : Application de chat d'entreprise souveraine"><span class="z"><img src="../assets/projet-chat.jpg" alt="Application de chat d'entreprise souveraine"></span></button>
+          <h2>Application de chat d'entreprise souveraine</h2>
+          <p>Conception d'une messagerie interne hébergée localement, alternative à Slack/Teams, avec accès protégé en profondeur, chiffrement des échanges, sauvegardes et plans de continuité.</p>
+          <p class="tags">#Souveraineté #Cybersécurité #PRA/PCA #Chiffrement</p>
+          <button class="detail ouvre" data-p="chat" data-img="../assets/projet-chat.jpg">Voir le détail</button>
+        </article>
+        <article class="carte" data-t="cyber">
+          <button class="photo ouvre" data-p="cybersecurity" data-img="../assets/projet-cybersecurite.jpg" aria-label="Voir le détail : Hygiène informatique et cybersécurité"><span class="z"><img src="../assets/projet-cybersecurite.jpg" alt="Cybersécurité"></span></button>
+          <h2>Hygiène informatique et cybersécurité</h2>
+          <p>Projet de sensibilisation aux bonnes pratiques de cybersécurité (protection des données, phishing, mots de passe, malwares, etc.).</p>
+          <p class="tags">#Cybersécurité #Phishing #ProtectionDesDonnées</p>
+          <button class="detail ouvre" data-p="cybersecurity" data-img="../assets/projet-cybersecurite.jpg">Voir le détail</button>
+        </article>
+        <article class="carte" data-t="reseau">
+          <button class="photo ouvre" data-p="raspberrypi" data-img="../assets/projet-raspberry.jpg" aria-label="Voir le détail : Initiation aux réseaux informatiques"><span class="z"><img src="../assets/projet-raspberry.jpg" alt="Raspberry Pi"></span></button>
+          <h2>Initiation aux réseaux informatiques</h2>
+          <p>Configuration d'une Raspberry Pi avec administration distante via SSH, contrôle d'une LED, collecte et transmission de données de capteurs.</p>
+          <p class="tags">#Réseaux #RaspberryPi #SSH #Python</p>
+          <button class="detail ouvre" data-p="raspberrypi" data-img="../assets/projet-raspberry.jpg">Voir le détail</button>
+        </article>
+        <article class="carte" data-t="telecom">
+          <button class="photo ouvre" data-p="fibreoptique" data-img="../assets/projet-fibre.jpg" aria-label="Voir le détail : Transmission de données"><span class="z"><img src="../assets/projet-fibre.jpg" alt="Fibre optique"></span></button>
+          <h2>Transmission de données</h2>
+          <p>Analyse de documents techniques, étude des câbles et fibres optiques, compréhension des mesures et schémas de transmission.</p>
+          <p class="tags">#Télécommunications #Transmission #FibreOptique</p>
+          <button class="detail ouvre" data-p="fibreoptique" data-img="../assets/projet-fibre.jpg">Voir le détail</button>
+        </article>
+        <article class="carte" data-t="cyber">
+          <button class="photo ouvre" data-p="linux" data-img="../assets/projet-linux.jpg" aria-label="Voir le détail : Sécurisation et traitement des données"><span class="z"><img src="../assets/projet-linux.jpg" alt="Sécurité Linux"></span></button>
+          <h2>Sécurisation et traitement des données</h2>
+          <p>Gestion des comptes utilisateurs, sécurisation des mots de passe, chiffrement des données avec LUKS sous Debian.</p>
+          <p class="tags">#Linux #LUKS #Chiffrement</p>
+          <button class="detail ouvre" data-p="linux" data-img="../assets/projet-linux.jpg">Voir le détail</button>
+        </article>
+        <article class="carte" data-t="telecom">
+          <button class="photo ouvre" data-p="sdr" data-img="../assets/sdr-constellation.jpg" aria-label="Voir le détail : Transmission SDR avec ADALM-PLUTO"><span class="z"><img src="../assets/sdr-cover.jpg" alt="Transmission SDR avec ADALM-PLUTO"></span></button>
+          <h2>Transmission SDR avec ADALM-PLUTO</h2>
+          <p>Mise en œuvre d'une chaîne de transmission numérique complète en radio logicielle : un message textuel est modulé en DQPSK, émis en RF puis décodé avec succès.</p>
+          <p class="tags">#SDR #DQPSK #MATLAB #Télécommunications</p>
+          <button class="detail ouvre" data-p="sdr" data-img="../assets/sdr-constellation.jpg">Voir le détail</button>
+        </article>
+    </section>
+  </main>
+
+  <!-- Contenu des fiches : lu par js/commun.js pour les fiches plein écran -->
+  <div id="donnees-fiches">
+  <!-- Popups -->
+  <div class="popup" id="cybersecurityPopup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('cybersecurity')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Hygiène informatique et cybersécurité</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE -->
+        <div class="popup-left">
+          <img src="../assets/cybersec.jpg" 
+              class="popup-image">
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Sensibilisation aux menaces informatiques courantes</li>
+            <li>Analyse des vulnérabilités humaines, matérielles et réseau</li>
+            <li>Étude des attaques fréquentes : phishing, malwares, ransomware…</li>
+            <li>Identification des conséquences possibles : fuite de données, pertes financières, etc.</li>
+            <li>Proposition de contre-mesures et bonnes pratiques</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- COMPÉTENCES UTILISÉES (NOUVELLE LIGNE ENTIÈRE) -->
+      <h3>Compétences utilisées</h3>
+      <div class="modal-tags">
+        <span class="modal-tag">Cybersécurité</span>
+        <span class="modal-tag">Analyse de risques</span>
+        <span class="modal-tag">Protection des données</span>
+        <span class="modal-tag">Sécurité réseau</span>
+        <span class="modal-tag">Sensibilisation</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+        Ce projet s’inscrit dans la SAE « Hygiène informatique et cybersécurité » et avait pour objectif
+        de sensibiliser les utilisateurs aux risques numériques. En groupe, nous avons réalisé un 
+        catalogue complet de vulnérabilités portant sur les mots de passe, les réseaux, les supports
+        amovibles, les mises à jour, les logiciels, les données personnelles et la sécurité matérielle.
+
+        <br><br>
+        Nous avons également étudié plusieurs scénarios d’attaque réalistes : phishing, malwares, 
+        ransomware, attaques réseau ou encore infections par clés USB. Chaque menace a été analysée 
+        selon son fonctionnement, ses impacts potentiels et les moyens de s’en protéger.
+      </p>
+
+      <!-- DOCUMENTS -->
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>Ce projet m’a fait prendre conscience que la plupart des failles viennent d’abord des comportements humains : un bon mot de passe ou un peu de vigilance évitent souvent le pire.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <a href="https://www.canva.com/design/DAGSfWmwY74/mIXZTxdpmpRkS-b_pRbHLA/edit" target="_blank">
+          <i class="fas fa-file-pdf"></i> Catalogue des vulnérabilités – Rapport du projet
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="popup" id="raspberrypiPopup">
+  <div class="popup-content">
+    <div class="popup-inner">
+      <span class="popup-close" onclick="closePopup('raspberrypi')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Initiation aux réseaux informatiques</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE + COMPÉTENCES -->
+        <div class="popup-left">
+
+          <img src="../assets/projet-raspberry.jpg" 
+              class="popup-image">
+
+          <h3>Compétences utilisées</h3>
+          <div class="modal-tags">
+            <span class="modal-tag">Réseaux</span>
+            <span class="modal-tag">IoT</span>
+            <span class="modal-tag">Raspberry Pi</span>
+            <span class="modal-tag">SSH</span>
+            <span class="modal-tag">Linux</span>
+          </div>
+
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Compréhension du fonctionnement des réseaux locaux</li>
+            <li>Ouverture et gestion des ports</li>
+            <li>Utilisation avancée du terminal Linux</li>
+            <li>Découverte de l’architecture matérielle du Raspberry Pi</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+          Ce projet s’inscrit dans la SAE « S’initier aux réseaux informatiques » et a consisté à mettre en 
+          place un système capable de mesurer la température et l’humidité d’une pièce à l’aide d’une 
+          Raspberry Pi 4 et d’un capteur DHT22. Il combine réseau, électronique et programmation Python.
+
+          <br><br>
+          Après l’installation de Raspberry Pi OS, la carte a été intégrée au réseau local et son adresse IP 
+          identifiée via <strong>netdiscover</strong>. Une connexion distante en SSH a ensuite été établie via Thonny pour 
+          développer plusieurs scripts Python.
+
+          <br><br>
+          Les premiers programmes ont permis de contrôler des LEDs via les broches GPIO. Le capteur DHT22 a 
+          ensuite été ajouté afin de relever en continu température et humidité. Un script final combinait 
+          ces relevés avec le pilotage des LEDs : une LED verte s’allumait sous 25°C, et une rouge au-dessus.
+
+          <br><br>
+          Ce projet m’a permis de découvrir l’architecture de la Raspberry Pi, de manipuler des services 
+          réseaux, et d’acquérir les bases de l’interfaçage de capteurs via Python.
+        </p>
+
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>Voir une LED réagir à une mesure réelle m’a montré concrètement comment le réseau, l’électronique et le code travaillent ensemble, et m’a donné envie d’explorer davantage l’IoT.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <a href="https://www.canva.com/design/DAGctKgUNtw/pWGpd4aNvbplnpx4u55QWw/edit" target="_blank">
+          <i class="fas fa-file-pdf"></i> Rapport du projet
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="popup" id="fibreoptiquePopup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('fibreoptique')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Transmission de données</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE -->
+        <div class="popup-left">
+          <img src="../assets/projet-fibre.jpg"
+              alt="Fibre optique" class="popup-image">
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Compréhension des supports de transmission : câbles et fibres optiques</li>
+            <li>Lecture et analyse de documents techniques</li>
+            <li>Interprétation de mesures et de schémas de transmission</li>
+            <li>Découverte des principes de la transmission de données en télécommunications</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3>Compétences utilisées</h3>
+      <div class="modal-tags">
+        <span class="modal-tag">Télécommunications</span>
+        <span class="modal-tag">Fibre optique</span>
+        <span class="modal-tag">Transmission</span>
+        <span class="modal-tag">Analyse technique</span>
+        <span class="modal-tag">Mesures</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+        Ce projet consistait à analyser des documents techniques pour comprendre comment les données circulent sur différents supports de transmission. Nous avons étudié les caractéristiques des câbles et des fibres optiques, ainsi que les mesures et les schémas permettant de caractériser une liaison.
+      </p>
+
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>Ce projet m’a montré que derrière chaque connexion se cache une infrastructure physique précise, et qu’apprendre à lire une documentation technique est une compétence aussi importante que la pratique.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <!-- À remplacer par le lien réel du document -->
+        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Rapport du projet</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="linuxPopup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('linux')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Sécurisation et traitement des données</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE -->
+        <div class="popup-left">
+          <img src="../assets/projet-linux.jpg"
+              alt="Sécurité Linux" class="popup-image">
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Gestion des comptes utilisateurs sous Debian</li>
+            <li>Mise en place de mots de passe robustes</li>
+            <li>Chiffrement des données avec LUKS</li>
+            <li>Compréhension des enjeux de confidentialité des données</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3>Compétences utilisées</h3>
+      <div class="modal-tags">
+        <span class="modal-tag">Linux</span>
+        <span class="modal-tag">Debian</span>
+        <span class="modal-tag">LUKS</span>
+        <span class="modal-tag">Chiffrement</span>
+        <span class="modal-tag">Administration système</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+        Ce projet portait sur la sécurisation d’un système Debian. J’ai géré les comptes utilisateurs, renforcé la sécurité des mots de passe et chiffré des données avec LUKS afin de les protéger en cas d’accès non autorisé à la machine.
+      </p>
+
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>J’ai compris qu’un chiffrement bien configuré protège réellement les données, mais qu’il demande de la rigueur : une erreur de manipulation peut rendre l’accès impossible, même pour son propriétaire.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <!-- À remplacer par le lien réel du document -->
+        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Rapport du projet</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="chatPopup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('chat')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Application de chat d'entreprise souveraine</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE -->
+        <div class="popup-left">
+          <img src="../assets/chat-souveraine.jpg"
+              alt="Application de chat d'entreprise souveraine" class="popup-image">
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Définition d'une messagerie interne hébergée localement, sous le contrôle de l'entreprise</li>
+            <li>Conception d'un accès protégé en profondeur : mot de passe fort, A2F, biométrie sur l'appareil, clé physique en option</li>
+            <li>Protection des messages et des fichiers par chiffrement, avec un « mode confidentiel »</li>
+            <li>Options avancées : accès par VPN, révocation immédiate des accès, journal d'audit, droits par rôle</li>
+            <li>Prévision d'un système de sauvegarde multi-couches et de plans PRA / PCA / PRI / PCI</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3>Compétences utilisées</h3>
+      <div class="modal-tags">
+        <span class="modal-tag">Cybersécurité</span>
+        <span class="modal-tag">Souveraineté numérique</span>
+        <span class="modal-tag">Chiffrement</span>
+        <span class="modal-tag">Gestion des accès</span>
+        <span class="modal-tag">Sauvegarde</span>
+        <span class="modal-tag">PRA / PCA</span>
+        <span class="modal-tag">Supervision</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+        Ce projet propose une application de chat d'entreprise souveraine et ultra-sécurisée, pensée comme une
+        alternative locale aux solutions américaines (Slack/Teams). Face aux enjeux de souveraineté numérique et
+        de dépendance aux plateformes étrangères, l'objectif est de permettre à une entreprise de communiquer en
+        interne sans exposer ses données.
+
+        <br><br>
+        L'application offre les fonctions d'une messagerie classique (chat 1:1, conversations d'équipe, canaux par
+        service ou projet, partage de fichiers, recherche, notifications et historique à durée de conservation
+        configurable), avec des données hébergées et administrées par l'entreprise. La sécurité repose sur
+        plusieurs barrières, de sorte qu'un compte volé ne suffit pas à entrer, et sur des innovations possibles
+        comme la sécurité adaptative ou la double validation des actions critiques.
+
+        <br><br>
+        Le projet couvre aussi l'exploitation : sauvegardes automatiques quotidiennes avec stockage secondaire
+        isolé, supervision et maintien en condition opérationnelle, plans de continuité et de reprise (PRA, PCA,
+        PRI, PCI) illustrés par des scénarios de crise, et engagements de service (disponibilité de 99,9 %, GTI 2 h
+        pour les incidents critiques, GTR 4 h pour les demandes standard).
+      </p>
+
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>Ce projet m'a fait comprendre que la sécurité d'un outil ne se limite pas au chiffrement : elle dépend aussi de l'exploitation au quotidien (sauvegardes, supervision, plans de reprise). Choisir où sont stockées ses données, c'est aussi choisir de qui l'on dépend.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <a href="https://canva.link/8lz8785n8y8gthf" target="_blank">
+          <i class="fas fa-file-pdf"></i> Présentation du projet
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="sdrPopup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('sdr')">&times;</span>
+
+      <div class="popup-header">
+        <h2>Transmission SDR avec ADALM-PLUTO</h2>
+      </div>
+
+      <div class="popup-two-cols">
+
+        <!-- COLONNE GAUCHE : IMAGE -->
+        <div class="popup-left">
+          <img src="../assets/sdr-constellation.jpg"
+              alt="Diagramme de constellation QPSK" class="popup-image">
+        </div>
+
+        <!-- COLONNE DROITE : OBJECTIFS -->
+        <div class="popup-right">
+          <h3>Objectifs atteints</h3>
+          <ul class="popup-list">
+            <li>Conception d'un émetteur : modulation DQPSK, trame structurée (en-tête, longueur, message) et filtrage RRC</li>
+            <li>Réalisation d'une chaîne de réception : AGC, compensation de fréquence, synchronisation symbole (Gardner) et porteuse</li>
+            <li>Transmission d'un message textuel en RF entre deux modules ADALM-PLUTO</li>
+            <li>Validation des résultats : constellation à 4 nuages distincts, BER nul et CRC valide</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <h3>Compétences utilisées</h3>
+      <div class="modal-tags">
+        <span class="modal-tag">Radio logicielle (SDR)</span>
+        <span class="modal-tag">ADALM-PLUTO</span>
+        <span class="modal-tag">MATLAB</span>
+        <span class="modal-tag">Modulation DQPSK</span>
+        <span class="modal-tag">Traitement du signal</span>
+        <span class="modal-tag">Synchronisation</span>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <p class="popup-description">
+        Ce projet consistait à mettre en œuvre une chaîne de transmission
+        numérique complète avec la radio logicielle (SDR) et des modules ADALM-PLUTO : un message textuel est
+        transformé en signal RF, puis décodé à la réception.
+
+        <br><br>
+        Côté émetteur, les données sont structurées en trame (en-tête « $$$ », octet de longueur et message), modulées
+        en DQPSK, choisie pour sa robustesse face aux rotations de phase, puis filtrées par un filtre en cosinus
+        surélevé (RRC) qui limite l'encombrement spectral et l'interférence inter-symboles.
+
+        <br><br>
+        Côté récepteur, le signal capté est normalisé par un contrôle automatique de gain, corrigé en fréquence,
+        filtré, puis synchronisé en symbole (algorithme de Gardner) et en porteuse. Le diagramme de constellation
+        montre quatre nuages bien distincts, le taux d'erreur binaire est nul, le CRC est validé et le message
+        « Je suis un etudiant en RT » est décodé avec succès.
+      </p>
+
+      <!-- RÉFLEXION PERSONNELLE -->
+      <p class="popup-reflection"><strong>Réflexion personnelle</strong>Voir apparaître mon message décodé sans erreur m'a montré à quel point la synchronisation est déterminante : sans elle, la chaîne ne fonctionne tout simplement pas. La SDR m'a aussi fait mesurer la liberté qu'apporte un système entièrement programmable.</p>
+
+      <div class="popup-documents-title">Documents</div>
+      <div class="popup-document">
+        <a href="https://canva.link/qe1kdrmqvo11xru" target="_blank">
+          <i class="fas fa-file-pdf"></i> Présentation du projet
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="pied"></div>
+  <p class="credit">Photos : serveurs, Victorgrigas, <a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_14.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a> ; fibre optique, Hustvedt, <a href="https://commons.wikimedia.org/wiki/File:Fiber_optic_illuminated.jpg" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
+
+  <div id="feuille" role="dialog" aria-modal="true" aria-labelledby="f-t" data-lenis-prevent>
+    <img id="f-i" alt="">
+    <div class="cont" id="f-c"></div>
+  </div>
+  <button id="clore">Fermer</button>
+  <div id="toast" role="status"></div>
+
+  <script src="../js/lib/gsap.min.js"></script>
+  <script src="../js/lib/ScrollTrigger.min.js"></script>
+  <script src="../js/lib/lenis.min.js"></script>
+  <script src="../js/commun.js?v=5"></script>
+  <script src="../js/projets.js?v=5"></script>
+</body>
+</html>

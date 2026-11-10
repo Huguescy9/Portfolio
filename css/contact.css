@@ -1,0 +1,191 @@
+/* ============================================
+   CONTACT.CSS - Styles de la page contact
+   ============================================ */
+
+#contact {
+  padding: 1rem 0 4rem;
+  background: var(--bg-gradient);
+  display: flex;
+  align-items: center;
+}
+
+/* Conteneur du formulaire de contact */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+/* Informations de contact */
+.contact-info {
+  flex: 1;
+  background-color: var(--bg-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info h3 {
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-info p {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-dark);
+}
+
+.contact-info p i {
+  color: var(--color-primary);
+  width: 20px;
+}
+
+.contact-info a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+/* Formulaire de contact */
+.contact-form {
+  flex: 2;
+  background-color: var(--bg-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form h3 {
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Bouton d'envoi */
+.contact-form button {
+  background-color: var(--color-primary);
+  color: var(--bg-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  display: block;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+/* Animation pour les champs actifs */
+.form-group.active label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Message de succès */
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-sm);
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  
+  .contact-info, 
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   Icônes réseaux - même style que le footer
+   ============================================================ */
+
+.contact-info .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-info .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: var(--color-dark);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info .social-links a:hover {
+  transform: translateY(-5px);
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* LinkedIn */
+.contact-info .social-links a[href*="linkedin.com"]:hover {
+  background-color: #0077b5;
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+}
+
+/* GitHub */
+.contact-info .social-links a[href*="github.com"]:hover {
+  background-color: #171515;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation fade in up */
+
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* Animation de base */
+.contact-info,
+.contact-form {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUpContent 0.7s ease-out forwards;
+}
+
+/* Cascade */
+.contact-info {
+  animation-delay: 0.35s;
+}
+
+.contact-form {
+  animation-delay: 0.55s;
+}

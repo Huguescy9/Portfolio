@@ -1,0 +1,36 @@
+/* ============================================
+   PROJETS.CSS - Page Projets (version française)
+   ============================================ */
+.entete { padding: 92px var(--marge) 34px; }
+.entete h1 { font-size: min(27vw, 48vh); line-height: .98; white-space: nowrap; overflow: hidden; margin-left: -.02em; }
+.entete h1 span { display: inline-block; }
+.filtres { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.filtre { border: 2px solid var(--clair); padding: 8px 18px; font-weight: 700; transition: background-color .2s, color .2s; }
+.filtre:hover { background: rgba(246, 247, 251, .14); }
+.filtre[aria-pressed="true"] { background: var(--clair); color: var(--nuit); }
+
+.cartes { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(28px, 4vw, 56px) clamp(16px, 2vw, 28px); padding: 14px var(--marge) 14vh; }
+.carte { grid-column: span 6; }
+.carte .photo { height: clamp(230px, 40vh, 440px); }
+.carte h2 { font-size: clamp(1.9rem, 3.4vw, 3.3rem); margin-top: 16px; }
+.carte p { margin-top: 8px; max-width: 62ch; }
+.carte .tags { color: #ff7a80; }
+
+/* Rythme de la grille complète : grands et petits visuels alternés. */
+.cartes:not(.filtree) .carte:nth-child(1) { grid-column: span 7; }
+.cartes:not(.filtree) .carte:nth-child(2) { grid-column: span 5; }
+.cartes:not(.filtree) .carte:nth-child(3) { grid-column: span 5; }
+.cartes:not(.filtree) .carte:nth-child(4) { grid-column: span 7; }
+.cartes:not(.filtree) .carte:nth-child(5) { grid-column: span 7; }
+.cartes:not(.filtree) .carte:nth-child(6) { grid-column: span 5; }
+.cartes:not(.filtree) .carte:nth-child(7) { grid-column: 1 / -1; }
+.carte.masque { display: none; }
+
+#donnees-fiches { display: none; }
+
+@media (max-width: 899px) {
+  .entete { padding: 82px 16px 26px; }
+  .cartes { padding: 8px 16px 11vh; }
+  .carte, .cartes:not(.filtree) .carte:nth-child(n) { grid-column: 1 / -1; }
+  .carte .photo { height: auto; aspect-ratio: 16 / 10; }
+}
