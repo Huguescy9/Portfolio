@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection...</title>
+</head>
+<body>
+  <script>
+    (function() {
+      // 1. Langue mémorisée (si l'utilisateur a déjà choisi FR/EN)
+      const savedLang = localStorage.getItem('siteLang');
+
+      // 2. Sinon, on regarde la langue du navigateur
+      let targetLang = savedLang;
+      if (!targetLang) {
+        const navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (navLang.startsWith('fr')) {
+          targetLang = 'fr';
+        } else {
+          targetLang = 'en';
+        }
+      }
+
+      // 3. Redirection vers la bonne version
+      window.location.replace('/' + targetLang + '/index.html');
+    })();
+  </script>
+
+  <p style="text-align:center; margin-top:40px; font-family:Poppins, Arial, sans-serif;">
+    Redirection vers votre langue préférée...
+  </p>
+
+  <noscript>
+    <p style="text-align:center; color:red; font-family:Poppins, Arial, sans-serif;">
+      JavaScript est désactivé. Vous allez être redirigé vers la version française :
+      <a href="/fr/index.html">Cliquez ici si la redirection ne se fait pas.</a>
+    </p>
+  </noscript>
+</body>
+</html>

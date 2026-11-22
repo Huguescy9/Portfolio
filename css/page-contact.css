@@ -1,0 +1,38 @@
+/* ============================================
+   PAGE-CONTACT.CSS - Page Contact (version française)
+   (css/contact.css reste utilisé par la version anglaise)
+   ============================================ */
+.entete { padding: 92px var(--marge) 10px; }
+.entete h1 { font-size: min(13.4vw, 40vh); line-height: .98; white-space: nowrap; overflow: hidden; margin-left: -.02em; }
+.entete h1 span { display: inline-block; }
+
+.contact { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); padding: clamp(24px, 5vh, 56px) var(--marge) clamp(60px, 12vh, 120px); }
+.contact h2 { font-size: clamp(1.8rem, 3vw, 2.9rem); margin-bottom: 20px; }
+
+.infos .mail { display: inline-block; font-family: var(--titre); font-size: clamp(1.6rem, 3.1vw, 3rem); line-height: 1.1; text-decoration: none; word-break: break-all; background: linear-gradient(var(--rouge), var(--rouge)) 0 100% / 0 4px no-repeat; transition: background-size .35s; }
+.infos .mail:hover { background-size: 100% 4px; }
+.infos .ligne-info { display: flex; align-items: center; gap: 12px; margin-top: 14px; font-size: 1.12rem; }
+.infos .ligne-info i { width: 22px; color: #ff7a80; }
+.infos .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.reseaux { display: flex; gap: 12px; margin-top: 28px; }
+.reseaux a { display: grid; place-items: center; width: 52px; height: 52px; border: 2px solid var(--clair); font-size: 1.35rem; text-decoration: none; transition: background-color .2s, color .2s, transform .2s; }
+.reseaux a:hover { background: var(--clair); color: var(--nuit); transform: translateY(-3px); }
+
+.formulaire { background: var(--nuit-2); padding: clamp(22px, 3vw, 40px); }
+.champ { margin-bottom: 22px; }
+.champ label { display: block; font-weight: 700; margin-bottom: 8px; }
+.champ input, .champ textarea { width: 100%; font: inherit; color: var(--clair); background: var(--nuit); border: 2px solid rgba(246, 247, 251, .35); padding: 13px 14px; transition: border-color .2s; }
+.champ textarea { min-height: 150px; resize: vertical; }
+.champ input:focus, .champ textarea:focus { outline: none; border-color: var(--rouge); }
+.champ input:user-invalid, .champ textarea:user-invalid { border-color: #ff7a80; }
+.envoyer { width: 100%; background: var(--rouge); color: #fff; padding: 16px 20px; font-weight: 700; font-size: 1.05rem; transition: transform .15s, opacity .2s; }
+.envoyer:hover { transform: translateY(-2px); }
+.envoyer:disabled { opacity: .7; cursor: wait; transform: none; }
+.etat { margin-top: 16px; padding: 12px 14px; font-weight: 700; display: none; }
+.etat.ok { display: block; background: #1f7a4d; }
+.etat.erreur { display: block; background: #7a1f24; }
+
+@media (max-width: 899px) {
+  .entete { padding: 82px 16px 6px; }
+  .contact { grid-template-columns: 1fr; padding: 20px 16px 60px; }
+}

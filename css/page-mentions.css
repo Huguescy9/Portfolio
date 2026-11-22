@@ -1,0 +1,28 @@
+/* ============================================
+   PAGE-MENTIONS.CSS - Mentions légales (version française)
+   ============================================ */
+.entete { padding: 92px var(--marge) 6px; }
+.entete h1 { font-size: min(11.6vw, 30vh); line-height: .98; white-space: nowrap; overflow: hidden; margin-left: -.02em; }
+.entete h1 span { display: inline-block; }
+.maj { color: var(--gris); padding: 0 var(--marge); margin-top: 10px; }
+
+.legal { padding: clamp(24px, 5vh, 50px) var(--marge) clamp(60px, 12vh, 110px); display: grid; gap: 0; }
+.legal section { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(16px, 3vw, 44px); padding: 28px 0; border-top: 1px solid rgba(246, 247, 251, .2); }
+.legal section:first-child { border-top: 0; }
+.legal h2 { font-size: clamp(1.6rem, 2.6vw, 2.4rem); }
+.legal p, .legal li { max-width: 70ch; }
+.legal p + p, .legal p + ul, .legal ul + p { margin-top: 12px; }
+.legal ul { padding-left: 20px; }
+.legal li { padding: 3px 0; }
+.legal a { color: #ff9a9e; }
+.legal strong { color: #fff; }
+.a-completer { display: inline-block; background: #7a5a00; color: #fff; padding: 2px 8px; font-weight: 700; }
+
+.footer-bottom a { color: inherit; }
+
+@media (max-width: 899px) {
+  .entete { padding: 82px 16px 4px; }
+  .maj { padding: 0 16px; }
+  .legal { padding: 20px 16px 60px; }
+  .legal section { grid-template-columns: 1fr; gap: 8px; }
+}

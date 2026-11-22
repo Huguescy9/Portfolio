@@ -1,0 +1,87 @@
+/* ============================================
+   CV.CSS — Styles de la page CV
+   ============================================ */
+
+#cv {
+  padding: 1rem 0 4rem;
+  background: var(--bg-gradient);
+}
+
+#cv .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animation fade-in du titre */
+#cv .section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* Boutons */
+.cv-actions {
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.cv-actions a {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cv-actions a:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* PDF */
+.cv-img {
+  width: 100%;
+  max-width: 440px; /* taille raisonnable */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  display: block;
+  margin-bottom: var(--spacing-lg); /* ← ESPACE propre */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+  animation-delay: 0.45s;
+}
+
+/* Animation fade-in pour les boutons */
+.cv-actions a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpContent 0.6s ease-out forwards;
+}
+
+/* Cascade */
+.cv-actions a:nth-child(1) {
+  animation-delay: 0.65s;
+}
+
+.cv-actions a:nth-child(2) {
+  animation-delay: 0.80s;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  iframe {
+    height: 75vh;
+  }
+}
